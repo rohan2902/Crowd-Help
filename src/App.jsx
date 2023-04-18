@@ -29,7 +29,7 @@ function App() {
       connectors={{
         walletconnect: {
           rpcUrl:
-            "https://goerli.infura.io/v3/eaf842956c36444c8aaf54163a47e0d2",
+            "https://polygon-mumbai.g.alchemy.com/v2/kmTLo6PD7m2kZ4LCSl8jBEGW8Zu9wX07",
         },
       }}
     >

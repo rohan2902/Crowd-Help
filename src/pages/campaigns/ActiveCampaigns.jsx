@@ -28,7 +28,7 @@ function ActiveCampaigns() {
     let ignore = false;
     // fetch the campaigns..
     const fetchData = async () => {
-      const response = await axios.get(api_url + "active-campaigns/10");
+      const response = await axios.get(api_url + "active-campaigns/10", { withCredentials: true });
       console.info(response.data);
       if (!ignore && response.status == 200) setActiveCampaigns(response.data);
     };

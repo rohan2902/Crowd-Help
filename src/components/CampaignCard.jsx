@@ -16,6 +16,8 @@ import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import ShareIcon from "@mui/icons-material/Share";
 
+
+
 // service imports..
 import { useNavigate } from "react-router-dom";
 
@@ -77,7 +79,8 @@ function CampaignCard(props) {
               // pt: "56.25%", -- by this, takes large space for card.
             }
           }
-          image={bannerUrl}
+          src="src\assets\social.jpg"
+          
         />
         <CardActionArea>
           <CardContent
@@ -127,18 +130,18 @@ function CampaignCard(props) {
             >
               <Stack direction="row" alignItems={"flex-end"}>
                 <Typography component="p" fontSize={15}>
-                  {`Ξ ${ethFunded} `}
+                  {`${ethFunded} `}
                 </Typography>
                 <Typography component="p" fontSize={10} color="grey">
-                  &nbsp; ETH funded
+                  &nbsp; Matic raised
                 </Typography>
               </Stack>
               <Stack direction="row" alignItems={"flex-end"}>
                 <Typography component="p" fontSize={15}>
-                  {`Ξ ${ethRaised} `}
+                  {` ${ethRaised} `}
                 </Typography>
                 <Typography component="p" fontSize={10} color="grey">
-                  &nbsp; ETH raised
+                  &nbsp; Matic Goal
                 </Typography>
               </Stack>
             </Stack>

@@ -112,7 +112,7 @@ function NavBar() {
             },
           }}
         >
-          CrowdHelp
+          <a href="/">CrowdHelp</a>
         </Typography>
         <StorefrontIcon
           sx={{

@@ -264,9 +264,9 @@ function ViewCampaign() {
 
                 <Link
                   variant="body2"
-                  href={`https://goerli.etherscan.io/address/${campaignData.id}`}
+                  href="https://mumbai.polygonscan.com/address/0x93F75E936dee1F5992D051aEb01ADa42A57918a3"
                 >
-                  View on Goerli Etherscan
+                  View on Polygon Mumbai Testnet
                 </Link>
               </Stack>
             </Container>
@@ -284,11 +284,11 @@ function ViewCampaign() {
         <Typography variant="caption">Contribution Details</Typography>
         <Container>
           <Typography variant="caption">Minimum Contribution amount</Typography>
-          <Typography>{campaignData.minContribAmount} ETH</Typography>
+          <Typography>{campaignData.minContribAmount} MATIC</Typography>
         </Container>
         <Container>
           <Typography variant="caption">Goal</Typography>
-          <Typography>{`${campaignData.ethRaised}`} ETH</Typography>
+          <Typography>{`${campaignData.ethRaised}`} MATIC</Typography>
         </Container>
         <Container>
           <Typography variant="caption">
@@ -327,7 +327,7 @@ function ViewCampaign() {
             value={(campaignData.ethFunded / campaignData.ethRaised) * 100}
           />
           <Typography variant="body2">
-            {`${campaignData.ethFunded}`} ETH funded by{" "}
+            {`${campaignData.ethFunded}`} MATIC funded by{" "}
             {`${campaignData.backersCount}`} backers.
           </Typography>
         </Container>
@@ -353,8 +353,8 @@ function ViewCampaign() {
               variant="caption"
               color="grey"
             >
-              ≥ {campaignData.minContribAmount} ETH &amp; ≤{" "}
-              {campaignData.ethRaised - campaignData.ethFunded} ETH
+              ≥ {campaignData.minContribAmount} MATIC &amp; ≤{" "}
+              {campaignData.ethRaised - campaignData.ethFunded} MATIC
             </Typography>
           </Stack>
           {isContributionSuccess == true ? (

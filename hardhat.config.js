@@ -3,8 +3,8 @@ require("@nomiclabs/hardhat-ethers");
 require("hardhat-deploy");
 require("@nomicfoundation/hardhat-toolbox");
 
-console.log(process.env.INFURA_API_KEY);
-console.log(process.env.PRIVATE_KEY);
+// console.log(process.env.INFURA_API_KEY);
+// console.log(process.env.PRIVATE_KEY);
 
 module.exports = {
   solidity: "0.8.17",
@@ -23,14 +23,16 @@ module.exports = {
       blockGasLimit: 18800000,
       chainId: 31337,
     },
-    goerli_testnet: {
-      // url: `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`, <<-- tried this way, its failing, so employed below way.
-      url: "https://goerli.infura.io/v3/eaf842956c36444c8aaf54163a47e0d2",
-      accounts: [process.env.PRIVATE_KEY],
-      gasPrice: 1000,
-      saveDeployments: true,
-      deploy: ["scripts/"],
+    goerli: {
+      url: "https://eth-goerli.g.alchemy.com/v2/skKE8y6WXLQH7RMUHzPApGbfnn7UzL-7",
+      accounts: ['7f1afbafd9b608280f63d518b231deb6f1e7cf9a0ca92b5eab144d400013ced2'],
+      
     },
+    mumbai: {
+      url: "https://polygon-mumbai.g.alchemy.com/v2/kmTLo6PD7m2kZ4LCSl8jBEGW8Zu9wX07",
+      accounts: ['7f1afbafd9b608280f63d518b231deb6f1e7cf9a0ca92b5eab144d400013ced2'],
+    },
+
   },
 };
 
