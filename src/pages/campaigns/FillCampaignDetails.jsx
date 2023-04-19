@@ -81,10 +81,12 @@ function FillCampaignDetails() {
           web3.utils.toWei(data.ethRaised, "ether"),
           timestamp,
           data.bannerUrl,
-          data.TotalOffering
+          data.TotalOffering,        
         )
         .send({
           from: accounts[0],
+        }).catch((e) =>{
+          console.log(e.error);
         });
 
       // After successful creation..
@@ -289,7 +291,7 @@ function FillCampaignDetails() {
                     id="bannerUrl"
                     {...register("bannerUrl", { required: true })}
                     label="Banner Image URL"
-                    type="url"
+                    type="text"
                     size="small"
                     fullWidth
                     title="This image will be shown as a banner"

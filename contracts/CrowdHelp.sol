@@ -68,7 +68,6 @@ contract Campaign{
 
     // Variables
     address payable public creator;
-    uint256 TotalOffering;
     uint256 public minimumContribution;
     uint256 public deadline;
     uint256 public targetContribution; // required to reach at least this much amount
@@ -78,6 +77,7 @@ contract Campaign{
     string public projectTitle;
     string public projectDes;
     string public bannerUrl;
+    uint256 TotalOffering;
     State public state = State.ACTIVE; 
 
     // mapping (uint => Contribution) public contributors;      // use indices as address with amountContributed as its values.
