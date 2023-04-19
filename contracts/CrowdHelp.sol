@@ -34,12 +34,13 @@ event ContributionReceived(
         uint256 minimumContribution,
         uint256 targetContribution,
         uint256 deadline,
-        string memory bannerUrl
+        string memory bannerUrl,
+        uint256 TotalOffering 
     ) public {
 
         // deadline = deadline;
 
-        Campaign campaign = new Campaign(msg.sender,minimumContribution,deadline,targetContribution,projectTitle,projectDesc, bannerUrl);
+        Campaign campaign = new Campaign(msg.sender,minimumContribution,deadline,targetContribution,projectTitle,projectDesc, bannerUrl, TotalOffering);
         deployedCampaigns.push(campaign);
     }
 
@@ -67,6 +68,7 @@ contract Campaign{
 
     // Variables
     address payable public creator;
+    uint256 TotalOffering;
     uint256 public minimumContribution;
     uint256 public deadline;
     uint256 public targetContribution; // required to reach at least this much amount
@@ -108,7 +110,8 @@ contract Campaign{
        uint256 _targetContribution,
        string memory _projectTitle,
        string memory _projectDes,
-       string memory _bannerUrl
+       string memory _bannerUrl,
+       uint256 _TotalOffering
    ) {
        creator = payable(_creator);
        minimumContribution = _minimumContribution;
@@ -118,6 +121,7 @@ contract Campaign{
        projectDes = _projectDes;
        raisedAmount = 0;
        bannerUrl=_bannerUrl;
+       TotalOffering = _TotalOffering;
    }
 
     function getContributorContribution(address  _contributor) internal view returns(int){

@@ -298,6 +298,12 @@ function ViewCampaign() {
         </Container>
         <Container>
           <Typography variant="caption">
+            Total Equity offered by company
+          </Typography>
+          <Typography>{`${campaignData.TotalOffering}`}</Typography>
+        </Container>
+        <Container>
+          <Typography variant="caption">
             Contributions are accepted till <i>(Deadline)</i>
           </Typography>
           <Typography>{`${new Date(campaignData.deadline)}`}</Typography>

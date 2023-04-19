@@ -205,6 +205,7 @@ function FillCampaignDetails() {
             errors.ethRaised ||
             errors.walletAddress ||
             errors.deadlineDate ||
+            errors.TotalOffering ||
             errors.deadlineTime ? (
               <Alert sx={{ marginBottom: 2, marginTop: 2 }} severity="error">
                 All fields are required
