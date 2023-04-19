@@ -81,7 +81,7 @@ function CampaignCard(props) {
           //     // pt: "56.25%", -- by this, takes large space for card.
           //   }
           // }
-          image={image}
+          image={bannerUrl}
           // image={require('../assets/social.jpg')}
           
         />

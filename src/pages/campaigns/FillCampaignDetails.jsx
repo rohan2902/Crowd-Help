@@ -80,7 +80,8 @@ function FillCampaignDetails() {
           web3.utils.toWei(data.minContribAmount, "ether"),
           web3.utils.toWei(data.ethRaised, "ether"),
           timestamp,
-          data.bannerUrl
+          data.bannerUrl,
+          data.TotalOffering
         )
         .send({
           from: accounts[0],
@@ -297,6 +298,20 @@ function FillCampaignDetails() {
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
+                  <TextField
+                    id="TotalOffering"
+                    {...register("TotalOffering", { required: true })}
+                    label="Total Shares "
+                    type= "number"
+                    size="small"
+                    fullWidth
+                    title="Offering Equity Percentage"
+                    helperText="Preferably from unsplash.com, flaticon.com, pexels.com."
+                    
+                  />
+                </Grid>
+
+                <Grid item xs={12} sm={6}>
                   <Box sx={{ padding: 0, margin: 0 }}>
                     <Typography variant="caption" color="GrayText">
                       Campaign ends at
@@ -331,7 +346,7 @@ function FillCampaignDetails() {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} style={{paddingTop:0}}>
                   {/* Just to be aligned with the date&time. */}
                   <Typography variant="caption">&nbsp;</Typography>
                   <TextField
@@ -352,6 +367,7 @@ function FillCampaignDetails() {
                         : "Please connect to the wallet"
                     }
                     disabled={isSubmitting}
+                    
                   />
                 </Grid>
 
