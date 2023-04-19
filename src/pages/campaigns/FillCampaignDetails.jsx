@@ -270,7 +270,7 @@ function FillCampaignDetails() {
                   <TextField
                     id="ethRaised"
                     {...register("ethRaised", { required: true })}
-                    label="Goal (ETH)"
+                    label="Goal (Matic)"
                     fullWidth
                     size="small"
                     type="number"

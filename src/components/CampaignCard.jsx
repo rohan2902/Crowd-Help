@@ -15,6 +15,7 @@ import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import ShareIcon from "@mui/icons-material/Share";
+import image from "../assets/social.jpg";
 
 
 
@@ -73,13 +74,15 @@ function CampaignCard(props) {
       >
         <CardMedia
           component="img"
-          sx={
-            {
-              // 16:9
-              // pt: "56.25%", -- by this, takes large space for card.
-            }
-          }
-          src="src\assets\social.jpg"
+          style={{height: "250px", paddingTop: '0'}}
+          // sx={
+          //   {
+          //     // 16:9
+          //     // pt: "56.25%", -- by this, takes large space for card.
+          //   }
+          // }
+          image={image}
+          // image={require('../assets/social.jpg')}
           
         />
         <CardActionArea>

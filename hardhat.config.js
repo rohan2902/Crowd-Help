@@ -29,8 +29,8 @@ module.exports = {
       
     },
     mumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/kmTLo6PD7m2kZ4LCSl8jBEGW8Zu9wX07",
-      accounts: ['7f1afbafd9b608280f63d518b231deb6f1e7cf9a0ca92b5eab144d400013ced2'],
+      url: "https://polygon-mumbai.g.alchemy.com/v2/OViClOjzqtBOkcUxfFv4Pe6WQ0MHqecK",
+      accounts: ['dde6e58290078568ded982247d47a0e33dbfe8ccb4ffcc7d085916476f504ac7'],
     },
 
   },
